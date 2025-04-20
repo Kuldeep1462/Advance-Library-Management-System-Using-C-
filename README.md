@@ -1,31 +1,75 @@
 # 📚 Advanced Library Management System in C++
 
-This is a fully-featured **Library Management System** built using **C++**, designed to handle core library operations such as managing books, issuing and returning books, and maintaining records. The project demonstrates effective use of C++ programming concepts including OOP, file handling, and STL.
+This is an advanced **Library Management System** developed in **C++**, designed for terminal-based operations. It supports role-based access (Admin, Librarian, Member) and provides persistent data management through file handling. All functionalities are packed into a single `main.cpp` file (`Advance-LMS.cpp`).
 
 ---
 
 ## 🚀 Features
 
-- 🔐 **Admin & User Login System**
-- 📖 **Add, Delete, Update & Search Books**
-- 🧾 **Issue & Return Book Functionality**
-- 📊 **View Book Records and User Histories**
-- 💾 **Persistent Data Storage** using file handling (no external database required)
-- 🧱 **Object-Oriented Design** using classes and inheritance
-- 🔁 **Operator Overloading** for streamlined book and user operations
-- 🎯 **Exception Handling** to catch and handle runtime errors
-- 📚 **Use of STL** (Standard Template Library) for efficient data structures
+- 👤 **User Roles**: Admin, Librarian, and Member login system.
+- 🧾 **Book Management**:
+  - Add, delete, update, list, and search for books.
+  - Issue and return books.
+- 🧑‍💼 **User Management**:
+  - Create new users with role-based ID allocation.
+  - Delete members (admin only).
+- 🔐 **Password Protection** with masked input.
+- 📁 **Persistent Storage** using `Books.txt`, `users.txt`, and `last_id.txt`.
+- 🧠 **Object-Oriented Programming** with classes and inheritance.
+- 💥 **Exception Handling**, operator overloading, and use of STL.
 
 ---
 
 ## 🧠 C++ Concepts Used
 
-- Classes & Objects  
-- Inheritance & Polymorphism  
-- Constructor/Destructor  
-- File I/O using `fstream`  
-- Operator Overloading  
-- Exception Handling  
-- STL containers like `vector`, `map`  
-- Functions and Modular Code
+- ✅ Classes and Inheritance (`Authenticate`, `Admin`, `Member`)
+- ✅ File I/O (`ifstream`, `ofstream`)
+- ✅ Vectors, Strings, and Streams
+- ✅ Password masking via `_getch()` from `<conio.h>`
+- ✅ Control structures, function overloading, and encapsulation
+
+---
+
+## 🗂️ File Structure
+
+```
+📁 Advanced-LMS
+├── Advance-LMS.cpp         # Main source code file
+├── Books.txt               # Book records
+├── users.txt               # User/member records
+├── last_id.txt             # Tracks last assigned member ID
+```
+
+---
+
+## ▶️ How to Run
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/advanced-library-management-cpp.git
+   cd advanced-library-management-cpp
+   ```
+
+2. **Compile the program**
+   > Windows:
+   ```bash
+   g++ Advance-LMS.cpp -o LMS.exe
+   ```
+
+   > Linux/macOS (you may need to remove or replace `_getch()` and `<conio.h>`):
+   ```bash
+   g++ Advance-LMS.cpp -o LMS
+   ```
+
+3. **Run the program**
+   ```bash
+   ./LMS
+   ```
+
+---
+
+## 🔑 Default PINs for Account Creation
+
+- `12062004` → Create **Member**
+- `12345678` → Create **Librarian**
 
